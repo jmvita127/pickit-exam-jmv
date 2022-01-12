@@ -1,0 +1,128 @@
+{
+  "vehiculos": [
+    {
+      "id": 1,
+      "nombre": "Antonio",
+      "apellido": "Giovinazzi",
+      "marca": "Alfa Romeo",
+      "modelo": "Giulietta Sport",
+      "año": 2021,
+      "patente": "XA-100-T",
+      "color": "Rojo",
+      "servicios": []
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "apellido": "Sainz",
+      "marca": "Ferrari",
+      "modelo": "La Ferrari",
+      "año": 2021,
+      "patente": "XB-200-S",
+      "color": "Rojo",
+      "servicios": []
+    },
+    {
+      "id": 3,
+      "nombre": "Lando",
+      "apellido": "Norris",
+      "marca": "McLaren",
+      "modelo": "765LT",
+      "año": 2020,
+      "patente": "XC-300-M",
+      "color": "Naranja",
+      "servicios": []
+    },
+    {
+      "id": 4,
+      "nombre": "Pierre",
+      "apellido": "Gasly",
+      "marca": "Honda",
+      "modelo": "Civic Type-R Sportline",
+      "año": 2021,
+      "patente": "XD-400-N",
+      "color": "Gris",
+      "servicios": [
+        {
+          "id": 2,
+          "nombre": "Cambio de filtro",
+          "precio": 200
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Fernando",
+      "apellido": "Alonso",
+      "marca": "Alpine",
+      "modelo": "A110S",
+      "año": 2021,
+      "patente": "XE-500-Q",
+      "color": "Azul",
+      "servicios": []
+    },
+    {
+      "id": 6,
+      "nombre": "Pierre",
+      "apellido": "Gasly",
+      "marca": "Honda",
+      "modelo": "Accord V6",
+      "año": 2021,
+      "patente": "XE-400-L",
+      "color": "Blanco",
+      "servicios": []
+    },
+    {
+      "nombre": "Juan Manuel",
+      "apellido": "Vita",
+      "marca": "",
+      "modelo": "",
+      "patente": "",
+      "color": "",
+      "servicios": [],
+      "id": 7
+    },
+    {
+      "nombre": "Juan Manuel ",
+      "apellido": "Vita",
+      "marca": "",
+      "modelo": "",
+      "patente": "",
+      "color": "",
+      "servicios": [],
+      "id": 8
+    }
+  ],
+  "servicios": [
+    {
+      "id": 1,
+      "nombre": "Cambio de aceite",
+      "precio": 100
+    },
+    {
+      "id": 2,
+      "nombre": "Cambio de filtro",
+      "precio": 200
+    },
+    {
+      "id": 3,
+      "nombre": "Cambio de correa",
+      "precio": 300
+    },
+    {
+      "id": 4,
+      "nombre": "Revisión general",
+      "precio": 400
+    },
+    {
+      "id": 5,
+      "nombre": "Pintura",
+      "precio": 500
+    },
+    {
+      "id": 6,
+      "nombre": "Otro",
+      "precio": 600
+    }
+  ]
+}

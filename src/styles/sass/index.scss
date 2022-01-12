@@ -1,0 +1,201 @@
+@import 'reset';
+
+
+//------- VARIABLES ---------
+$color1: black;
+$color2: white;
+$navColor: #124AB3;
+$colorBordes: rgb(8, 164, 236);
+$colorBordeSeccion: #124AB3;
+$sombra: rgb(26, 25, 25);
+$oro: rgb(250, 204, 0);
+$violet: violet;
+
+//------- MEDIAQS ---------
+$smallPhones: 520px;
+$tablet : 720px;
+$desktop : 1024px;
+
+
+//------- MIXINS-MEDIAQS ---------
+@mixin disableEscudos {
+  @media (max-width: #{$smallPhones - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+
+//------- MIXINS ---------
+@mixin flexbox($jc:center, $ai:center, $fd:column) {
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+
+}
+
+@mixin seccion($backColor) {
+  @include flexbox();
+  @extend %bordesSeccion;
+  min-height: 100vh;
+  background-color: $backColor;
+  width: 100%;
+}
+
+@mixin button($color, $size) {
+  @extend %bordes;
+  width: $size;
+  font-size: 1.5rem;
+
+}
+
+
+@mixin avatarInfo(){
+  background-color: $color2;
+  border: 0.5px solid $color1;
+  color: $color1;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 10rem;
+  bottom: 0rem;
+  left: 4rem;
+  display: block;
+  position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-left: 1rem;
+  margin-left: 2rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+
+
+//------- FUENTES ---------
+$fuenteNAV: 'Bebas Neue',
+cursive;
+$fuenteH1: 'Lobster',
+cursive;
+$fuenteH2: 'Crete Round',
+serif;
+$fuenteP: 'Bitter',
+serif;
+
+
+//------- TAMAÑOS ---------
+$sizeH1: 2rem;
+$sizeH2: 1.5rem;
+$sizeP: 1rem;
+
+
+//------- TAMAÑOS PHONE ---------
+$sizeH1phone: 3rem;
+$sizeH2phone: 2rem;
+$sizePphone: 2rem;
+
+//------- TAMAÑOS TABLET ---------
+$sizeH1tablet: 3rem;
+$sizeH2tablet: 2rem;
+$sizePtablet: 2rem;
+
+//------- EXTENDS ---------
+%sombra {
+  box-shadow: 5px 5px 5px 0px $sombra;
+}
+
+%sombraCardsImg {
+  box-shadow: 3px 3px 3px 5px $sombra;
+}
+
+%sombraNav {
+  box-shadow: 0.1px 1px 1px 3px $sombra;
+}
+
+
+%bordes {
+  border-style: solid;
+  border-width: 2px;
+  border-color: $colorBordes;
+}
+
+%bordesSeccion {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $colorBordeSeccion;
+}
+
+//------- ESTILOS GLOBABLES ---------
+h1 {
+  margin-top: 1rem;
+  color: $oro;
+  font-size: $sizeH1;
+  font-family: $fuenteH1;
+  margin: 0.3rem;
+
+  @include phone {
+    margin-top: 2rem;
+    text-align: center;
+}
+  @include tablet {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+h2 {
+  color: $color2;
+  font-size: $sizeH2;
+  font-family: $fuenteH1;
+
+  @include phone {
+    color: $color2;
+    font-size: $sizeH2phone;
+    font-family: $fuenteH2;
+    text-align: center;
+}
+  @include tablet {
+    color: $color2;
+    font-size: $sizeH2tablet;
+    font-family: $fuenteH2;
+    text-align: center;
+  }
+}
+
+p {
+  color: $color2;
+  font-size: $sizeP;
+  font-family: $fuenteP;
+
+  @include phone {
+    color: $color2;
+    font-size: $sizePphone;
+    font-family: $fuenteP;
+    text-align: center;
+}
+  @include tablet {
+    color: $color2;
+    font-size: $sizePtablet;
+    font-family: $fuenteP;
+    text-align: center;
+  }
+
+}
+
+span {
+  color: $oro;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
